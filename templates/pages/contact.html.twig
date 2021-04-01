@@ -1,0 +1,46 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Welcome 2 !{% endblock %}
+
+{% block stylesheets %}
+    {#{{ encore_entry_link_tags('app') }}#}
+{% endblock %}
+
+{% block javascripts %}
+    {#{{ encore_entry_script_tags('app') }}#}
+{% endblock %}
+
+{% block body %}
+    <h2>Привет проверка тела</h2>
+
+    <div id="app">
+        [[ message ]]
+
+        <hr>
+
+        <ul id="example-1">
+            <li v-for="item in items" :key="item.message">
+                [[ item.message ]]
+            </li>
+        </ul>
+
+    </div>
+
+    <h2>Привет проверка тела</h2>
+{% endblock %}
+
+{% block end_js %}
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Привет, Vue!',
+                items: [
+                    {message: 'Foo'},
+                    {message: 'Bar'}
+                ]
+            },
+            delimiters: ['[[', ']]']
+        })
+    </script>
+{% endblock %}

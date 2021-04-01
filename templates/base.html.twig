@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+
+        {% block stylesheets %}
+            {#{{ encore_entry_link_tags('app') }}#}
+        {% endblock %}
+
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+        {% endblock %}
+    </head>
+    <body>
+        11111111
+        {% block body %}{% endblock %}
+        <h2>{{ name }}</h2>
+    </body>
+    {#<!-- vue -->#}
+    {#<!-- версия для разработки, отображает полезные предупреждения в консоли -->#}
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    {#<!-- production-версия, оптимизированная для размера и скорости -->#}
+    {#<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>#}
+    
+    {% block end_js %}{% endblock %}
+    
+</html>

@@ -1,0 +1,25 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+index:
+  path: /
+  controller: 'App\Controller\DefaultController::index'
+
+hello:
+  path: /hello/{name}
+  controller: 'App\Controller\DefaultController::hello'
+
+contact:
+  path: /contact/
+  controller: 'App\Controller\DefaultController::contact'
+
+#api_v1:
+#  path: /zapi_v1/{var1}/{var2}/
+#  controller: 'App\Controller\DefaultController::contact'
+#  requirements:
+#    # проверяем чтобы была только цифра
+#    var1: '\d+'
+## defaults:
+##     var1: 1
+##     var2: 1
